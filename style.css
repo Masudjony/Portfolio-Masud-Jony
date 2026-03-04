@@ -141,7 +141,7 @@ ul li::before {
 }
 
 #experience {
-    background-color: #34495E;
+    background-color: #394066;
 }
 
 #collaboration {
@@ -414,6 +414,113 @@ img.arrowIcon:hover {
 
 .Middle_project_inner.project_content p {
     margin-top: 20px;
+}
+
+.experience_img {
+    position: relative;
+}
+
+.experience_img img {
+    position: relative !important;
+    width: 55% !important;
+    top: 0;
+    transform: translate(0px, 0px);
+    left: 29%;
+}
+
+.experience_inner h1 {
+    line-height: 0px;
+    height: 60px;
+}
+
+.ParonSoft,
+.Spectrum {
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.experience_content span {
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
+
+.experience_content p {
+    margin-top: 20px !important;
+    max-width: 100%;
+}
+
+.viewmoreBTN button {
+    text-decoration: underline;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.viewmoreBTN button:hover {
+    margin-left: 5px;
+}
+
+.experience_inner label {
+    padding-top: 7px !important;
+    display: block;
+    font-size: 1.2rem;
+}
+
+/* Experience Modal Specific Styles */
+#experience-modal .modal-content {
+    background: rgba(35, 43, 69, 0.9);
+}
+
+#experience-modal .project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+#experience-modal .project-card:hover {
+    border-color: white;
+    transform: translateY(-5px);
+}
+
+#experience-modal .project-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#experience-modal .project-card label {
+    padding-top: 7px !important;
+    display: block;
+    font-size: 1.1rem;
+    color: white;
+    opacity: 0.9;
+}
+
+#experience-modal .project-card .details-link {
+    position: relative;
+    top: 0;
+    margin-top: 5px;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    float: none;
+    /* Reset float if needed */
+}
+
+#experience-modal .project-card p {
+    margin-top: 1.2rem !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--subtext-color);
 }
 
 @media (max-width: 900px) {
