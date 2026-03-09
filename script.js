@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Portfolio Modal Logic
     const portfolioModal = document.getElementById('portfolio-modal');
     const viewAllBtn = document.querySelector('.Right_project_inner.project_content button');
-    const closeBtn = document.querySelector('.close-modal');
+    const closeBtn = document.querySelector('#portfolio-modal .close-modal');
 
     if (viewAllBtn && portfolioModal && closeBtn) {
         viewAllBtn.addEventListener('click', () => {
@@ -120,4 +120,70 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Experience Modal Logic
+    const experienceModal = document.getElementById('experience-modal');
+    const viewExpBtn = document.querySelector('#experience .viewmoreBTN button');
+    const closeExpBtn = document.querySelector('#experience-modal .close-modal');
+
+    if (viewExpBtn && experienceModal && closeExpBtn) {
+        viewExpBtn.addEventListener('click', () => {
+            experienceModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeExpBtn.addEventListener('click', () => {
+            experienceModal.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == experienceModal) {
+                experienceModal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    // Custom Cursor Logic
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorFollower = document.querySelector('.cursor-follower');
+    let mouseX = 0;
+    let mouseY = 0;
+    let followerX = 0;
+    let followerY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // Immediately move the dot
+        cursorDot.style.left = mouseX + 'px';
+        cursorDot.style.top = mouseY + 'px';
+    });
+
+    // Smoothly follow the mouse with easing
+    function animateCursor() {
+        // Easing constant (0 to 1)
+        const easing = 0.15;
+
+        followerX += (mouseX - followerX) * easing;
+        followerY += (mouseY - followerY) * easing;
+
+        cursorFollower.style.left = followerX + 'px';
+        cursorFollower.style.top = followerY + 'px';
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover interactions for all interactive elements
+    const interactables = document.querySelectorAll('a, button, .close-modal, .arrowIcon');
+    interactables.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursorFollower.classList.add('hover');
+        });
+        el.addEventListener('mouseleave', () => {
+            cursorFollower.classList.remove('hover');
+        });
+    });
 });
