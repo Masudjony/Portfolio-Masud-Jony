@@ -754,6 +754,55 @@ img.arrowIcon:hover {
     margin-left: 5px;
 }
 
+@media (max-width: 1600px) {
+
+    .Left_project_inner.project_content h1,
+    .Left_project_inner.project_content h1 {
+        font-size: 45px;
+    }
+
+    .Middle_experience_inner.experience_content h2,
+    .rams h2,
+    .project_content .EdooSphere h2 {
+        font-size: 22px !important;
+    }
+
+    .experience_content p,
+    .experience_content span,
+    .experience_inner label,
+    .viewmoreBTN button,
+    .Middle_project_inner.project_content p,
+    .Middle_project_inner.project_content a,
+    .Right_project_inner.project_content button {
+        font-size: 16px;
+    }
+
+    .Right_project_inner.project_content button {
+        top: 80%;
+    }
+
+    .Portfolio_container {
+        display: flow-root;
+        margin-left: 150px;
+    }
+}
+
+@media (max-width: 1500px) {
+    img.arrowIcon {
+        margin-left: 200px;
+        margin-top: 120px;
+    }
+
+    img.arrowIcon:hover {
+        margin-left: 205px;
+    }
+
+    .DownloadCV {
+        bottom: 19%;
+        padding: 8px 20px;
+    }
+}
+
 @media (max-width: 900px) {
     .modal-content {
         width: 95%;
