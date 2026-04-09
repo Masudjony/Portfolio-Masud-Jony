@@ -57,12 +57,12 @@ body {
 }
 
 /* Interactive Elements Hover Effect */
-a,
+/* a,
 button,
 .close-modal,
 .arrowIcon {
     cursor: none !important;
-}
+} */
 
 .cursor-follower.hover {
     width: 60px;
@@ -437,9 +437,9 @@ img.arrowIcon:hover {
     font-weight: 700;
     position: absolute;
     width: 67px;
-    top: 90%;
-    left: 40%;
-    transform: translate(-110%, -73%);
+    bottom: -45px;
+    left: -70px;
+    /* transform: translate(-107%, 53%); */
     transition: all 0.3s ease-out;
     cursor: pointer;
 }
@@ -738,16 +738,18 @@ img.arrowIcon:hover {
 .DownloadCV {
     position: absolute;
     bottom: 16%;
-    left: 50%;
+    left: 47%;
     /* margin-top: 100px; */
-    background: white;
+    /* background: white; */
     border-radius: 100px;
-    color: #2d3436;
+    color: #ffffff;
     padding: 21px 30px;
     font-size: 27px;
     font-weight: 600;
-    cursor: pointer;
+    cursor: pointer !important;
     transition: all 0.3s ease-out;
+    text-decoration: underline !important;
+
 }
 
 .DownloadCV:hover {
