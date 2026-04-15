@@ -296,6 +296,10 @@ ul li::before {
     align-items: center;
 }
 
+.hero-container.Experience_part {
+    width: 70%;
+}
+
 #about .hero-container img {
     float: right;
 }
@@ -376,6 +380,7 @@ ul {
 
 .Portfolio_container {
     display: flow-root;
+    padding: 0 100px 0 300px;
 }
 
 .project_inner {
@@ -522,11 +527,11 @@ img.arrowIcon:hover {
     background: none;
     border: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     position: absolute;
-    width: 67px;
-    bottom: -45px;
+    width: 83px;
+    bottom: 2px;
     left: -70px;
     /* transform: translate(-107%, 53%); */
     transition: all 0.3s ease-out;
@@ -609,7 +614,7 @@ img.arrowIcon:hover {
     background: none;
     border: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     transition: all 0.3s ease-out;
     cursor: pointer;
