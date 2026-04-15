@@ -147,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Custom Cursor Logic
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorFollower = document.querySelector('.cursor-follower');
+    const parallaxElements = document.querySelectorAll('#hero-parallax > div');
     let mouseX = 0;
     let mouseY = 0;
     let followerX = 0;
@@ -159,6 +160,21 @@ document.addEventListener('DOMContentLoaded', () => {
         // Immediately move the dot
         cursorDot.style.left = mouseX + 'px';
         cursorDot.style.top = mouseY + 'px';
+
+        // Hero Parallax Effect
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        const deltaX = (mouseX - centerX) / centerX;
+        const deltaY = (mouseY - centerY) / centerY;
+
+        parallaxElements.forEach(el => {
+            const speed = parseFloat(el.getAttribute('data-speed'));
+            if (!isNaN(speed)) {
+                const x = deltaX * speed * 20;
+                const y = deltaY * speed * 20;
+                el.style.transform = `translate(${x}px, ${y}px)`;
+            }
+        });
     });
 
     // Smoothly follow the mouse with easing
