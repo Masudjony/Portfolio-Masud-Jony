@@ -164,11 +164,100 @@ ul li::before {
 }
 
 /* Sections background */
+/* Sections background */
 #hero {
     background: #394066;
     overflow: hidden;
     /* Added to contain the zoomed image */
 }
+
+/* --- Hero Parallax Elements --- */
+.hero-bg-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1111111111;
+}
+
+.bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.6;
+    animation: blobFloat 12s infinite alternate ease-in-out;
+}
+
+.blob-blue {
+    /* background: #00C6FF; */
+    width: 600px;
+    height: 600px;
+    top: -150px;
+    left: -100px;
+}
+
+.blob-green {
+    /* background: #00FF88; */
+    width: 500px;
+    height: 500px;
+    bottom: -100px;
+    right: -100px;
+    animation-delay: -6s;
+}
+
+.hero-floating-text {
+    position: absolute;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1vw;
+    color: rgb(255 255 255);
+    white-space: nowrap;
+    user-select: none;
+    transition: transform 0.1s ease-out;
+    right: 0;
+    background: #434a70;
+    width: fit-content;
+    padding: 15px 30px;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.text-software {
+    top: 18%;
+    left: 44%;
+    opacity: 1;
+}
+
+.text-design {
+    bottom: 21%;
+    opacity: 1;
+    right: 37%;
+}
+
+.text-research {
+    bottom: 44%;
+    opacity: 1;
+    left: 23%;
+}
+
+@keyframes blobFloat {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        transform: translateY(60px) scale(1.1);
+    }
+}
+
+.homepage .hero-container {
+    position: relative;
+    z-index: 10;
+}
+
+/* --- End of Hero Parallax --- */
 
 #about {
     background-color: #2D3436;
@@ -199,7 +288,7 @@ ul li::before {
 }
 
 .hero-container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -337,7 +426,7 @@ ul li::before {
 .slide img {
     position: absolute;
     left: 16px;
-    width: 90%;
+    width: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
