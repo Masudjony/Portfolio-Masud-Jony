@@ -897,6 +897,90 @@ img.arrowIcon:hover {
         bottom: 19%;
         padding: 8px 20px;
     }
+
+    #horizontal-nav {
+        left: 8%;
+    }
+
+    .Portfolio_container {
+        display: flow-root;
+        margin-left: 0;
+    }
+
+    .experience_content p,
+    .experience_content span,
+    .experience_inner label,
+    .viewmoreBTN button,
+    .Middle_project_inner.project_content p,
+    .Middle_project_inner.project_content a,
+    .Right_project_inner.project_content button {
+        font-size: 14px;
+    }
+
+    .project_content .EdooSphere {
+        float: left;
+        width: 40%;
+        margin-right: 45px;
+    }
+
+    .Left_project_inner.project_content h1 {
+        line-height: 12px;
+        padding-bottom: 35px;
+        font-size: 40px;
+    }
+
+    .Right_project_inner.project_content button {
+        top: 75%;
+    }
+
+    .project-card p {
+        font-size: 0.8rem;
+    }
+
+    .project-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .card-content a {
+        font-size: 14px;
+    }
+
+    .modal-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    .Portfolio_container {
+        display: flow-root;
+        padding: 0 50px 0 230px;
+    }
+
+    .project_content .EdooSphere {
+        float: left;
+        width: 43%;
+        margin-right: 40px;
+    }
+
+    .experience_content p,
+    .experience_content span,
+    .experience_inner label,
+    .viewmoreBTN button,
+    .Middle_project_inner.project_content p,
+    .Middle_project_inner.project_content a,
+    .Right_project_inner.project_content button {
+        font-size: 12px;
+    }
+
+    .Right_project_inner.project_content button {
+        top: 70%;
+    }
+
+    .Left_project_inner.project_content h1 {
+        line-height: 12px;
+        padding-bottom: 30px;
+        font-size: 35px;
+    }
 }
 
 @media (max-width: 900px) {
