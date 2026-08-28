@@ -74,7 +74,7 @@ button,
 /* Horizontal Navigation Menu */
 #horizontal-nav {
     position: fixed;
-    left: 6%;
+    left: 8%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
@@ -101,13 +101,13 @@ ul li::before {
     display: block;
     align-items: center;
     gap: 10px;
-    margin: 40px 0;
+    margin: 45px 0;
 }
 
 #horizontal-nav ul li a {
     text-decoration: none;
     color: var(--subtext-color);
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
