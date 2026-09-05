@@ -365,7 +365,7 @@ h1 {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: var(--subtext-color);
     max-width: 500px;
@@ -550,24 +550,44 @@ img.arrowIcon:hover {
     /* margin-bottom: 31px; */
     transition: all 0.3s ease-out;
     color: white;
+    font-weight: 600;
+
 }
 
 .Middle_project_inner.project_content a:hover {
     margin-right: -5px;
 }
 
-.card-content a {
+/* .card-content a {
     text-decoration: underline;
     cursor: pointer;
     float: right;
     margin-top: -40px;
-    /* margin-bottom: 31px; */
     transition: all 0.3s ease-out;
     color: white;
+} */
+.card-content a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    /* float: right; */
+    /* margin-top: -40px; */
+    /* margin-bottom: 31px; */
+    transition: all 0.3s ease-out;
+    color: #000000;
+    padding: 15px;
+    background: white;
+    width: 100%;
+    display: flow-root;
+    text-align: center;
+    border-radius: 7px;
+    margin-top: 1rem;
 }
 
 .card-content a:hover {
     margin-right: -5px;
+    background: #fad4b2;
 }
 
 .Middle_project_inner.project_content p {
@@ -762,8 +782,8 @@ img.arrowIcon:hover {
 }
 
 .modal-header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     font-family: 'Outfit', sans-serif;
     line-height: 0;
 }
@@ -775,7 +795,7 @@ img.arrowIcon:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(401px, 1fr));
     gap: 2rem;
     padding-bottom: 2rem;
     max-height: 74vh;
@@ -792,6 +812,22 @@ img.arrowIcon:hover {
     transition: transform 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.project-card-inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -829,6 +865,16 @@ img.arrowIcon:hover {
     max-width: 100%;
 }
 
+.project-link {
+    margin-top: auto;
+    width: 100%;
+    padding-top: 1.5rem;
+}
+
+/* .project-link a {
+    margin-top: 0;
+} */
+
 .DownloadCV {
     position: absolute;
     bottom: 16%;
@@ -851,6 +897,9 @@ img.arrowIcon:hover {
 }
 
 @media (max-width: 1600px) {
+    .modal-content {
+        padding: 2rem 1.5rem 2rem 2rem;
+    }
 
     .Left_project_inner.project_content h1,
     .Left_project_inner.project_content h1 {
@@ -870,7 +919,7 @@ img.arrowIcon:hover {
     .Middle_project_inner.project_content p,
     .Middle_project_inner.project_content a,
     .Right_project_inner.project_content button {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .Right_project_inner.project_content button {
@@ -879,7 +928,15 @@ img.arrowIcon:hover {
 
     .Portfolio_container {
         display: flow-root;
-        margin-left: 150px;
+        margin-left: 30px;
+    }
+
+    .project-card p {
+        font-size: 14px;
+    }
+
+    .project-card h2 {
+        font-size: 1.5rem;
     }
 }
 
@@ -894,7 +951,7 @@ img.arrowIcon:hover {
     }
 
     .DownloadCV {
-        bottom: 19%;
+        bottom: 15%;
         padding: 8px 20px;
     }
 
@@ -946,7 +1003,7 @@ img.arrowIcon:hover {
     }
 
     .modal-header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -980,6 +1037,15 @@ img.arrowIcon:hover {
         line-height: 12px;
         padding-bottom: 30px;
         font-size: 35px;
+    }
+
+    .DownloadCV {
+        bottom: 15%;
+        padding: 8px 20px;
+    }
+
+    .slide img {
+        width: 80%;
     }
 }
 
