@@ -89,11 +89,6 @@ button,
     align-items: center;
 }
 
-ul li::before {
-    content: "→";
-    display: none;
-}
-
 #horizontal-nav ul li {
     font-size: 1.5rem;
     font-weight: 600;
@@ -118,10 +113,18 @@ ul li::before {
 }
 
 #horizontal-nav .arrow {
-    font-size: 1rem;
-    opacity: 0.5;
-    transition: transform 0.3s ease;
-    margin-top: -2px;
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-6px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    color: var(--accent-color);
+}
+
+#horizontal-nav .arrow::after {
+    content: "→";
 }
 
 #horizontal-nav ul li a:hover,
@@ -131,7 +134,8 @@ ul li::before {
 
 #horizontal-nav ul li.active a .arrow {
     opacity: 1;
-    transform: translateX(5px);
+    visibility: visible;
+    transform: translateX(4px);
 }
 
 #presentation {
@@ -415,18 +419,7 @@ ul {
     left: 53px !important;
 }
 
-ul li {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--accent-color);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
-ul li::before {
-    content: "→";
-}
 
 .slide img {
     position: absolute;
